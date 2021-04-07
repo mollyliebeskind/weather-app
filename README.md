@@ -11,38 +11,38 @@ Dynamically generated weather app using async api calls
 To accomodate NodeJS functionality, server.js points to 'website' folder. 
 
 
-- Node Modules
+|- Node Modules
 
 |
 
 |
 
-- Website
+|- Website
 
 | 
 
-- - -  Images / 
+|- - -  Images / 
 
 |
 
-- - - index.html
+|- - - index.html
 
 |
 
-- - - style.css
+|- - - style.css
 
 |
 
-- - - app.js
-
-|
-
-|
-
-- package-lock.json
+|- - - app.js
 
 |
 
 |
 
-- server.js
+|- package-lock.json
+
+|
+
+|
+
+|- server.js

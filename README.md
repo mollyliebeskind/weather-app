@@ -13,8 +13,6 @@ To accomodate NodeJS functionality, server.js points to 'website' folder.
 
 |- Node Modules
 
-|
-
 |- Website
 
 |- - -  Images / 
@@ -25,10 +23,6 @@ To accomodate NodeJS functionality, server.js points to 'website' folder.
 
 |- - - app.js
 
-|
-
 |- package-lock.json
-
-|
 
 |- server.js

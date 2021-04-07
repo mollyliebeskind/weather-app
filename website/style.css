@@ -292,3 +292,101 @@ footer {
     height: 60px;
     justify-content: center;
 }
+
+@media (min-width: 600px) {
+
+    header {
+        min-height: 80px;
+    }
+
+    #intro-section {
+        background-image: url(images/running-mountains-landscape.jpg);
+        display: flex;
+        flex-direction: row;
+        background-size: cover;
+        padding-top: 0px;
+        background-position: center center;
+    }
+
+    #intro-description {
+        text-align: left;
+        margin: 0% 10% 0% 0%;
+        width: 40%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+    
+    h2 {
+        letter-spacing: 2px;
+        font-size: 40px;
+    }
+    
+    h3, p{
+        font-size: 20px;
+    }
+
+   #description-title {
+       font-size: 30px;
+   }
+
+   .how-it-works {
+       display: flex;
+       flex-direction: row;
+   }
+
+   .how-it-works-text {
+       width: 50%;
+       margin: 0% 0% 0% 10%;
+   }
+
+   #weather-input-form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    }
+
+    #weather-record-response {
+        width: 40%;
+        margin: 0%;
+        margin: 5% 0% 0% 0%;
+    }
+
+    .how-it-works-image {
+        width: 60vw;
+    }
+
+    .card-area {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding: 8% 0% 0% 0%;
+    }
+    
+    .scroll-arrow {
+        display: none;
+    }
+    
+    .card-container-horizontal {
+        margin-top: 3%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-gap: 10vw;;
+        overflow-x: hidden;
+    }
+    
+    .condition-card {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .condition-card-thumb {
+        background-size: contain;
+        background-repeat: nos-repeat;
+        height: 100px;
+        width: 100px;
+        margin: 5% auto 5% auto;
+    }
+}

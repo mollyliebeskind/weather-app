@@ -37,7 +37,12 @@ span {
     color: #d47555;
 }
 
-button {
+a, a:hover, a:visited, a:active {
+    text-decoration: inherit;
+}
+
+button, 
+.how-to-button {
     font-family: 'Pangolin', cursive;
     font-weight: 600;
     letter-spacing: 2px;

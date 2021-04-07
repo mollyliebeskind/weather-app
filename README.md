@@ -12,11 +12,7 @@ To accomodate NodeJS functionality, server.js points to 'website' folder.
 
 
 |- Node Modules
-
 |
-
-|
-
 |- Website
 
 | 

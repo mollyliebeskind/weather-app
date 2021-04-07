@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+/* Overarching rules */
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px, minmax(300px, auto), 80px;
+    background: #fcfcf9;
+    margin: 0%;
+    font-family: 'Raleway', sans-serif;
+    color: #fcfcf9;
+    letter-spacing: 1px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'Pangolin', cursive;
+    margin: 0%;
+    color: #fcfcf9;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-family: 'Pangolin', cursive;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin: 0px;
+}
+
+span {
+    color: #d47555;
+}
+
+button {
+    font-family: 'Pangolin', cursive;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background:#f9efd5;
+    color: #233437;
+    border-radius: 10px;
+    border: 0px;
+    height: 42px;
+    text-transform: uppercase;
+    margin: 4% 0% 4% 0%;
+    width: 100%;
+    /* box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%); */
+}
+
+/* header */
+header {
+    grid-area: 1 / 1 / 2 / 2;
+    background: #6b8060;
+    height: 50px;
+    width: 100%;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title-box {
+    text-align: center;
+    position: fixed;
+    left: 50%; 
+    right: auto; 
+    top: 25px;
+    transform: translate(-50%, 0%);
+    background: #d47555;
+    height: 50px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    display: none;
+}
+
+figure {
+    margin: 0em;
+}
+/* content */
+main {
+    grid-area: 2 / 1 / 3 / 2;
+    margin: 0px;
+}
+
+section {
+    min-height: 300px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#intro-section {
+    background-image: url(images/running-mountains.PNG);
+    margin-top: 50px;
+    padding-top: 100px;
+    text-align: center;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+
+#description-details {
+    font-weight: 500;
+}
+
+#weather-input-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 5% 0% 0% 0%;
+}
+
+.form-box {
+    margin: 4% 0% 4% 0%;
+    border-radius: 10px;
+    border: 0px;
+    line-height: 2em;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.7em;
+    height: 48px;
+    box-shadow: inset 0 1px 3px #ddd;
+    text-align: left;
+    text-indent: 10pt;
+    color: rgb(35, 52, 55, 100);
+}
+
+#weather-record-response {
+    background-color: #f9efd5;
+    border-radius: 10px;
+    min-height: 300px;
+    display: none;
+    flex-direction: column;
+    width: 90%;
+    margin: 10%;
+}
+
+#form-result-header {
+    color: #7a4949;
+}
+
+.form-result {
+    margin: 10px;
+    color: #233437;
+}
+
+#description-title {
+    font-size: 20px;
+}
+
+#how-it-works-section {
+    background: #fcfcf9;
+    color: #233437;
+}
+
+.how-it-works {
+    margin: 5% 0% 10% 0%;
+}
+
+.how-it-works-step {
+    color: #d47555;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 4%;
+}
+
+.how-it-works-header {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 4%;
+}
+
+.how-it-works-descriptor {
+    font-weight: light;
+    font-size: 16px;
+    margin: 4%;
+}
+
+.how-it-works-image {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 90vw;
+    height: 400px;
+}
+
+#how-it-works-img-1 {
+    background-image: url(images/tablet-man.jpg);
+}
+
+#how-it-works-img-2 {
+    background-image: url(images/running-woman.jpg);
+}
+
+.how-to-button {
+    width: 50%;
+    margin: 4%;
+    background: #d47555;
+    color:#f9efd5;
+}
+
+#weather-and-running {
+    background: #f9efd5;
+    color: #233437;
+    align-items: center;
+    text-align: center;
+}
+
+.card-area {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 1fr;
+    padding: 8% 0% 0% 0%;
+}
+
+.scroll-arrow {
+    background-size: contain;
+    height: 100px;
+    background-repeat: no-repeat;
+    margin-top: 300%;
+}
+
+#left-arrow {
+    background-image: url(images/left-arrow.png);
+}
+
+#right-arrow {
+    background-image: url(images/right-arrow.png);
+}
+
+.card-container-horizontal {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    grid-template-rows: 1fr;
+    grid-gap: 10vw;;
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.condition-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.condition-card-thumb {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    margin: 5% auto 5% auto;
+}
+
+#condition-img-2 {
+    background-image: url(images/sun-icon.png);
+}
+
+#condition-img-1 {
+    background-image: url(images/cloudy.png);
+}
+
+#condition-img-3 {
+    background-image: url(images/wind-icon.png);
+}
+
+/* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    grid-area: 3 / 1 / 4 / 2;
+    background-color: #7a4949;
+    text-align: center;
+    font-size: 12px;
+    height: 60px;
+    justify-content: center;
+}

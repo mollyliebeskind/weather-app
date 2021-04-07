@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>WeatherApp</title>
+        <!-- Load Google Fonts -->
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Weather to run</h1>
+        </header>
+        <div id="title-box">
+            <h1>weather to <br>run</h1>
+        </div>
+        <main>
+            <section id="intro-section">
+                <div id="intro-description">
+                    <h2 id="description-title">Make the most of <span>your miles.</span></h2>
+                    <p id="description-details">
+                        API driven weather data that helps you optimize your run performance.
+                    </p>
+                </div>
+                <div id="weather-input-form">
+                    <input id="zip-box" type="text" pattern="\d*" name="budget-box"  maxlength="6" class="form-box" placeholder="Zip Code" required>
+                    <select id="run-duration-selector" name="Run Duration" class="form-box">
+                        <option value="default">Run Duration</option>
+                        <option value="Less than 3">3 or less miles</option>
+                        <option value="Between 3 and 6">3.1-6 miles</option>
+                        <option value="Between 6 and 9">6.1-9 miles</option>
+                        <option value="Between 9 and 12">9.1-12 miles</option>
+                        <option value="Between 12 and 15">12.1-15 miles</option>
+                        <option value="More than 15">More than 15 miles</option>
+                    </select>
+                    <select id="run-feeling-selector" name="Your Feeling" class="form-box">
+                        <option value="default">Feeling</option>
+                        <option value="terrible">Terrible</option>
+                        <option value="okay">Okay</option>
+                        <option value="good">Good</option>
+                        <option value="great">Great</option>
+                        <option value="excellent">Excellent</option>
+                    </select>
+                    <button id="trigger-button" type="button">Run</button>
+                </div>
+                <div id="weather-record-response">
+                    <h2 id='form-result-header'>Run recorded!</h2>
+                    <div id="date-result" class='form-result'></div>
+                    <div id="temp-result" class='form-result'></div>
+                    <div id="duration-result" class='form-result'></div>
+                    <div id="feel-result" class='form-result'></div>
+                </div>
+            </section>
+            <section id="how-it-works-section">
+                <h2>How it works</h2>
+                <div class="how-it-works">
+                    <figure id="how-it-works-img-1" class="how-it-works-image"></figure>
+                    <div class="how-it-works-step">
+                        Step 1
+                    </div>
+                    <div class="how-it-works-header">
+                        Provide a bit of information
+                    </div>
+                    <div class="how-it-works-descriptor">
+                        Share your zip code, your run duration, and how you felt
+                        on your run.
+                    </div>
+                    <button class="how-to-button" type="button">Enter Zip</button>
+                </div>
+                <div class="how-it-works">
+                    <figure id="how-it-works-img-2" class="how-it-works-image"></figure>
+                    <div class="how-it-works-step">
+                        Step 2
+                    </div>
+                    <div class="how-it-works-header">
+                        Receive personalized recommendations
+                    </div>
+                    <div class="how-it-works-descriptor">
+                        We will analyze your running patterns against weather
+                        data to help you understand your own optimal conditions
+                        so you can plan your runs accordingly.   
+                    </div>
+                    <button class="how-to-button" type="button">Personalize</button>
+                </div>
+            </section>
+            <section id="weather-and-running">
+                <h2>Find your optimal running condition.</h2>
+                <div class="card-area">
+                    <figure id="left-arrow" class="scroll-arrow"></figure>
+                    <div class="card-container-horizontal">
+                        <div class="condition-card" id="condition-card-1">
+                            <figure id="condition-img-1" class="condition-card-thumb"></figure>
+                            <h3>Cool and Crisp</h3>
+                            <p>
+                                Enjoy your longest runs when the air is chilled and you
+                                can keep your body temperature low.</p>
+                        </div>
+                        <div class="condition-card" id="condition-card-1">
+                            <figure id="condition-img-2" class="condition-card-thumb"></figure>
+                            <h3>Sun Shining</h3>
+                            <p>
+                                For shorter runs the added heat that
+                                comes with a beautiful sun-shining day can be 
+                                well worth it.
+                            </p>
+                        </div>
+                        <div class="condition-card" id="condition-card-1">
+                            <figure id="condition-img-3" class="condition-card-thumb"></figure>
+                            <h3>High Winds</h3>
+                            <p>
+                                While wind will slow you down, it can a
+                                nice challenge to otherwise casual runs. 
+                            </p>
+                        </div>
+                    </div>
+                    <figure id="right-arrow" class="scroll-arrow"></figure>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Copywrite WeatherToRun</p>
+        </footer>
+    </body>
+    <script src="app.js" type="text/javascript"></script> 
+</html>

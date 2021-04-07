@@ -17,8 +17,6 @@ To accomodate NodeJS functionality, server.js points to 'website' folder.
 
 |- Website
 
-| 
-
 |- - -  Images / 
 
 |- - - index.html

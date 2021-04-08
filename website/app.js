@@ -12,19 +12,18 @@ const updateUI = async(url) => {
         const resultBox = document.getElementById('weather-record-response');
         resultBox.style.display = 'flex';
 
-        const lastEntry = retrievedData[retrievedData.length - 1]
         // Manipulate date to human readable format
         const d = new Date(0);
-        d.setUTCSeconds(lastEntry.date);
+        d.setUTCSeconds(retrievedData.date);
         const dateString = new String(d);
         const dateInfo = dateString.slice(0,15);
         const timeInfo = dateString.slice(16,21);
 
 
         document.getElementById('date-result').innerHTML = dateInfo + " " + timeInfo;
-        document.getElementById('temp-result').innerHTML = lastEntry.temp + " degrees F";
-        document.getElementById('duration-result').innerHTML = lastEntry.runDuration + " miles";
-        document.getElementById('feel-result').innerHTML = "Overall it felt " + lastEntry.runFeel;
+        document.getElementById('temp-result').innerHTML = retrievedData.temp + " degrees F";
+        document.getElementById('duration-result').innerHTML = retrievedData.runDuration + " miles";
+        document.getElementById('feel-result').innerHTML = "Overall it felt " + retrievedData.runFeel;
 
         return retrievedData
     }
@@ -34,13 +33,7 @@ const updateUI = async(url) => {
 };
 
 // Function to post data from API to server side database
-const postData = async(url, temperature, dateInput, runDuration, runFeel) => {
-    data = {
-        temp: temperature,
-        date: dateInput,
-        runDuration: runDuration,
-        runFeel: runFeel
-    };
+const postData = async(url, data) => {
     console.log("Input Data");
     console.log(data);
 
@@ -64,7 +57,7 @@ const postData = async(url, temperature, dateInput, runDuration, runFeel) => {
 };
 
 // Trigger API request
-const getAPIData = async (zipCode, baseURL, apiKey) => {
+const getWeather = async (zipCode, baseURL, apiKey) => {
     const fullURL = `${baseURL}zip=${zipCode}&units=imperial&appid=${apiKey}`;
 
     console.log(fullURL);
@@ -91,15 +84,17 @@ function triggerResponse() {
     const runDuration = document.getElementById('run-duration-selector').value
     const runFeel = document.getElementById('run-feeling-selector').value
     
-    getAPIData(zipCode, baseURL, apiKey)
+    getWeather(zipCode, baseURL, apiKey)
 
     .then(function(data) {
-        const temperature = data.main.temp;
-        const dateInput = data.dt;
-        postData('/postData', temperature, dateInput, runDuration, runFeel);
-    })
+        let dataInput = {
+            temp: data.main.temp,
+            date:  data.dt,
+            runDuration: runDuration,
+            runFeel: runFeel
+        }
 
-    .then(function() {
+        postData('/addData', dataInput)
         updateUI('/getData')
     });
 
